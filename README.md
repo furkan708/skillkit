@@ -39,7 +39,10 @@ Protocol server**.
 ## 🚀 Quick start
 
 ```bash
-# install from PyPI (installs the `skillkit` command)
+# run without installing (uvx — pulls from PyPI on demand)
+uvx --from skillkit-cli skillkit lint ./skills
+
+# or install (installs the `skillkit` command)
 pipx install skillkit-cli
 
 # ...or from source
