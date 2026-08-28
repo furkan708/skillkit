@@ -2,7 +2,7 @@
 
 # 🧰 skillkit
 
-![Python](https://img.shields.io/badge/python-3.9%2B-blue)
+[![Python](https://img.shields.io/badge/python-3.10%2B-blue)](https://www.python.org/)
 ![License](https://img.shields.io/badge/license-MIT-green)
 ![Tests](https://img.shields.io/badge/tests-76%20passed-brightgreen)
 [![CI](https://github.com/furkan708/skillkit/actions/workflows/ci.yml/badge.svg)](https://github.com/furkan708/skillkit/actions/workflows/ci.yml) ![Code style: ruff](https://img.shields.io/badge/code%20style-ruff-261230.svg) ![Types: mypy](https://img.shields.io/badge/types-mypy-blue)
