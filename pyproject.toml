@@ -7,7 +7,7 @@ name = "skillkit"
 version = "1.0.0"
 description = "The toolbox for AI agent skills: scaffold, lint, pack, install, and serve SKILL.md skills with a built-in MCP server"
 readme = "README.md"
-requires-python = ">=3.9"
+requires-python = ">=3.10"
 license = { text = "MIT" }
 keywords = ["mcp", "model-context-protocol", "ai-agents", "skills", "claude", "llm", "cli"]
 classifiers = [
