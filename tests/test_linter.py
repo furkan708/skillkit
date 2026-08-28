@@ -1,6 +1,6 @@
 """Tests for the linter rules, scoring, and formatting."""
 
-from skillkit.linter import ERROR, INFO, WARN, lint_skill
+from skillkit.linter import ERROR, INFO, lint_skill
 from skillkit.model import load_skill
 
 GOOD = """---

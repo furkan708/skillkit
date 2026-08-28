@@ -12,6 +12,7 @@ from __future__ import annotations
 import json
 import sys
 from pathlib import Path
+from typing import Any
 
 from .linter import lint_skill
 from .model import SkillError, find_skills, load_skill
@@ -69,7 +70,7 @@ class SkillkitServer:
     # ------------------------------------------------------------------
     # tool implementations (return JSON-serializable payloads)
     # ------------------------------------------------------------------
-    def tool_list_skills(self, _arguments: dict):
+    def tool_list_skills(self, _arguments: dict) -> dict:
         skills = find_skills(self.skills_dir)
         return {
             "skills_dir": str(self.skills_dir),
@@ -85,7 +86,7 @@ class SkillkitServer:
             ],
         }
 
-    def tool_read_skill(self, arguments: dict):
+    def tool_read_skill(self, arguments: dict) -> dict:
         name = str(arguments.get("name", ""))
         folder = self.skills_dir / name
         if not (folder / "SKILL.md").is_file():
@@ -97,7 +98,7 @@ class SkillkitServer:
             "instructions": skill.body,
         }
 
-    def tool_lint_skill(self, arguments: dict):
+    def tool_lint_skill(self, arguments: dict) -> dict:
         name = str(arguments.get("name", ""))
         folder = self.skills_dir / name
         if not (folder / "SKILL.md").is_file():
@@ -117,10 +118,10 @@ class SkillkitServer:
     # ------------------------------------------------------------------
     # JSON-RPC dispatch
     # ------------------------------------------------------------------
-    def _result(self, request_id, payload):
+    def _result(self, request_id: int | str | None, payload: dict) -> dict:
         return {"jsonrpc": "2.0", "id": request_id, "result": payload}
 
-    def _error(self, request_id, code: int, message: str):
+    def _error(self, request_id: int | str | None, code: int, message: str) -> dict:
         return {"jsonrpc": "2.0", "id": request_id, "error": {"code": code, "message": message}}
 
     def handle_message(self, message: dict) -> dict | None:
@@ -180,7 +181,7 @@ class SkillkitServer:
 
         return self._error(request_id, -32601, f"method not found: {method}")
 
-    def serve(self, stdin=None, stdout=None) -> None:
+    def serve(self, stdin: Any = None, stdout: Any = None) -> None:
         """Read newline-delimited JSON-RPC from stdin, write responses to stdout."""
         input_stream = stdin if stdin is not None else sys.stdin
         output_stream = stdout if stdout is not None else sys.stdout
@@ -188,12 +189,14 @@ class SkillkitServer:
             line = line.strip()
             if not line:
                 continue
+            decoded: Any
+            response: dict | None
             try:
-                message = json.loads(line)
+                decoded = json.loads(line)
             except json.JSONDecodeError:
                 response = self._error(None, -32700, "parse error")
             else:
-                response = self.handle_message(message)
+                response = self.handle_message(decoded)
             if response is not None:
                 output_stream.write(json.dumps(response, ensure_ascii=False) + "\n")
                 output_stream.flush()

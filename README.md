@@ -3,7 +3,7 @@
 ![Python](https://img.shields.io/badge/python-3.9%2B-blue)
 ![License](https://img.shields.io/badge/license-MIT-green)
 ![Tests](https://img.shields.io/badge/tests-76%20passed-brightgreen)
-[![CI](https://github.com/furkan708/skillkit/actions/workflows/ci.yml/badge.svg)](https://github.com/furkan708/skillkit/actions/workflows/ci.yml)
+[![CI](https://github.com/furkan708/skillkit/actions/workflows/ci.yml/badge.svg)](https://github.com/furkan708/skillkit/actions/workflows/ci.yml) ![Code style: ruff](https://img.shields.io/badge/code%20style-ruff-261230.svg) ![Types: mypy](https://img.shields.io/badge/types-mypy-blue)
 ![PyPI](https://img.shields.io/badge/dependencies-zero-success)
 
 **The toolbox for AI agent skills.** Scaffold, lint, pack, and install
@@ -16,6 +16,8 @@ Protocol server**.
 > Community audits found that the overwhelming majority of published
 > SKILL.md files carry at least one "skill smell" — and a large share leak
 > secrets. skillkit catches those before you ship.
+
+📖 **Deep docs:** [Usage guide](docs/USAGE.md) — lint rules reference, MCP patterns, CI usage · [Architecture](docs/ARCHITECTURE.md) · [Contributing](CONTRIBUTING.md) · [Changelog](CHANGELOG.md) · [Security](SECURITY.md)
 
 ## ✨ Features
 

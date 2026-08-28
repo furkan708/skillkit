@@ -9,7 +9,6 @@ from skillkit.frontmatter import (
     split_frontmatter,
 )
 
-
 DOC = """---
 name: pdf-tools
 description: Extract text from PDFs. Use when the user mentions PDFs.
