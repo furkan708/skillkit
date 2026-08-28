@@ -4,7 +4,7 @@
 ![License](https://img.shields.io/badge/license-MIT-green)
 ![Tests](https://img.shields.io/badge/tests-76%20passed-brightgreen)
 [![CI](https://github.com/furkan708/skillkit/actions/workflows/ci.yml/badge.svg)](https://github.com/furkan708/skillkit/actions/workflows/ci.yml) ![Code style: ruff](https://img.shields.io/badge/code%20style-ruff-261230.svg) ![Types: mypy](https://img.shields.io/badge/types-mypy-blue)
-![PyPI](https://img.shields.io/badge/dependencies-zero-success)
+![Dependencies](https://img.shields.io/badge/dependencies-zero-success)
 
 **The toolbox for AI agent skills.** Scaffold, lint, pack, and install
 [SKILL.md](https://agentskills.io) skills — and serve your whole skill library
@@ -136,7 +136,7 @@ skillkit/
 
 - [ ] `skillkit search` — search community skill registries
 - [ ] More install targets (Codex, Copilot CLI paths as they standardize)
-- [ ] `skillkit doctor` — deep prompt-injection heuristics
+- [ ] `skillkit doctor` — prompt-injection heuristics *(planned, not implemented yet)*
 
 ## 📄 License
 

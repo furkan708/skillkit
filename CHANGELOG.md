@@ -6,6 +6,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Fixed
+- Dependencies badge alt-text no longer implies a PyPI release (package is installable from source).
+
 ### Planned
 - See the Roadmap section in the README.
 
