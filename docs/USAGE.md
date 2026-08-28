@@ -150,7 +150,7 @@ same library through MCP — one source of truth, two delivery paths.
 # .github/workflows/skills.yml
 name: Skill lint
 steps:
-  - run: pip install git+https://github.com/furkan708/skillkit.git
+  - run: pip install skillkit-cli
   - run: |
       for d in skills/*/; do skillkit lint "$d" --strict; done
 ```

@@ -32,11 +32,15 @@ Protocol server**.
 - 🔌 **`mcp`** — a **zero-dependency MCP server** (stdio, JSON-RPC 2.0) that
   exposes `list_skills`, `read_skill`, and `lint_skill` tools to any client
 - 🪶 **Zero dependencies** — pure Python standard library
-- 🧪 **76 tests**, CI on Python 3.9 → 3.12
+- 🧪 **76 tests**, CI on Python 3.10 → 3.12
 
 ## 🚀 Quick start
 
 ```bash
+# install from PyPI (installs the `skillkit` command)
+pipx install skillkit-cli
+
+# ...or from source
 git clone https://github.com/furkan708/skillkit.git
 cd skillkit && pip install .
 
