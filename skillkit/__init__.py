@@ -3,7 +3,7 @@
 from .linter import Finding, LintReport, lint_skill
 from .model import Skill, SkillError, find_skills, load_skill
 
-__version__ = "1.0.1"
+__version__ = "1.0.2"
 __all__ = [
     "Skill",
     "SkillError",

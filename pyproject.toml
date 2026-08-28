@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "skillkit-cli"  # "skillkit" on PyPI is an unrelated package; CLI command stays `skillkit`
-version = "1.0.1"
+version = "1.0.2"
 description = "The toolbox for AI agent skills: scaffold, lint, pack, install, and serve SKILL.md skills with a built-in MCP server"
 readme = "README.md"
 requires-python = ">=3.10"

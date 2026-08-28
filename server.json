@@ -2,17 +2,17 @@
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "io.github.furkan708/skillkit",
   "title": "skillkit",
-  "description": "The toolbox for AI agent skills: scaffold, lint, pack, install, and serve SKILL.md skills with a built-in MCP server",
+  "description": "Toolbox for AI agent skills: scaffold, lint, pack, install, and serve SKILL.md skills",
   "repository": {
     "url": "https://github.com/furkan708/skillkit",
     "source": "github"
   },
-  "version": "1.0.1",
+  "version": "1.0.2",
   "packages": [
     {
       "registryType": "pypi",
       "identifier": "skillkit-cli",
-      "version": "1.0.1",
+      "version": "1.0.2",
       "transport": {
         "type": "stdio"
       }
