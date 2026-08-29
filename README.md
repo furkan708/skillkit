@@ -79,11 +79,26 @@ every other MCP-compatible agent:
 
 Your agent can now discover and read every installed skill on demand:
 
-| Tool          | What it does                                        | | ------------- | --------------------------------------------------- | | `list_skills` | Discover installed skills with names + descriptions | | `read_skill`  | Load the full SKILL.md instructions of one skill    | | `lint_skill`  | Validate a skill and get its quality score          |
+| Tool          | What it does                                        |
+| ------------- | --------------------------------------------------- |
+| `list_skills` | Discover installed skills with names + descriptions |
+| `read_skill`  | Load the full SKILL.md instructions of one skill    |
+| `lint_skill`  | Validate a skill and get its quality score          |
 
 ## What lint catches
 
-| Rule | Severity | Check | | ---- | -------- | ----- | | SEC001 | ✗ error | Leaked secrets: GitHub/AWS/OpenAI/Slack tokens, private keys, hardcoded credentials | | SKILL001 | ✗ error | Invalid `name`: charset, length ≤ 64, reserved words (`anthropic`, `claude`) | | SKILL002 | ✗ error | `name` does not match the folder name | | SKILL003 | ✗ error | `description` longer than 1,024 characters | | SKILL009 | ✗ error | `metadata` is not a string→string map | | SKILL004 | ⚠ warn | Vague description (won't trigger — describe *what* and *when*) | | SKILL005 | ⚠ warn | Body over ~500 lines (move detail into `references/`) | | SKILL007 | ⚠ warn | Folder typos: `script/`, `reference/`, `docs/`… | | SKILL006 | · info | Very thin body — add steps and examples | | SKILL008 | · info | Unknown frontmatter fields |
+| Rule | Severity | Check |
+| ---- | -------- | ----- |
+| SEC001 |  error | Leaked secrets: GitHub/AWS/OpenAI/Slack tokens, private keys, hardcoded credentials |
+| SKILL001 |  error | Invalid `name`: charset, length ≤ 64, reserved words (`anthropic`, `claude`) |
+| SKILL002 |  error | `name` does not match the folder name |
+| SKILL003 |  error | `description` longer than 1,024 characters |
+| SKILL009 |  error | `metadata` is not a string→string map |
+| SKILL004 |  warn | Vague description (won't trigger — describe *what* and *when*) |
+| SKILL005 |  warn | Body over ~500 lines (move detail into `references/`) |
+| SKILL007 |  warn | Folder typos: `script/`, `reference/`, `docs/`… |
+| SKILL006 | · info | Very thin body — add steps and examples |
+| SKILL008 | · info | Unknown frontmatter fields |
 
 Every run ends with a **0–100 score and a letter grade**, so you know when a
 skill is ready to publish.
